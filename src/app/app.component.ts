@@ -7,6 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+appareils: any[]=[
+  {
+  name: 'Machine à laver',
+  status: 'éteint'
+  },
+  {
+  name: 'Télévision',
+  status: 'allumé'
+  },
+  {
+  name: 'Ordinateur',
+  status: 'éteint'
+  }
+]
 isAuth=false;
 constructor(){
   setTimeout(()=>{
