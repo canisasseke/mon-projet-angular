@@ -8,6 +8,14 @@
         <app-appareil></app-appareil>
         <app-appareil></app-appareil>
       </ul>
+      <button type="button" class="btn btn-success"
+      (click)="onAllumerTout()" [disabled]="!isAuth">
+        Tout Allumer
+      </button>
+      <button type="button" class="btn btn-danger"
+      (click)="onEteintTout()" [disabled]="!isAuth">
+        Tout Eteindre
+      </button>
     </div>
   </div>
 </div>
