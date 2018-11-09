@@ -10,6 +10,7 @@ export class AppareilComponent implements OnInit {
   appareilName = 'Machine à laver';
   appareilStatus = 'éteint';
 
+  textvalue: string;
   constructor() { }
 
   ngOnInit() {
