@@ -3,8 +3,12 @@
   <div class="row">
     <div class="col-xs-12">
       <h2>Mes appareils</h2>
+      <p>Mise à jour le : {{lastUpdate | date}}</p>
+      <p>Mise a jour async le : {{asyncDate | async|date}}</p>
       <ul class="list-group">
-        <app-appareil  *ngFor="let appareil of appareils" [appareilName]="appareil.name"
+        <app-appareil  *ngFor="let appareil of appareils; let i = index"
+        [indexofAppareil]="i"
+        [appareilName]="appareil.name"
         [appareilStatus]="appareil.status"></app-appareil>
       </ul>
       <button type="button" class="btn btn-success"
