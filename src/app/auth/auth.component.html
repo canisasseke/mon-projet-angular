@@ -1,3 +1,7 @@
-<p>
-  auth works!
-</p>
+<h2>Authentification</h2>
+<button type="button" class="btn btn-primary" (click)="onSignIn()" *ngIf="authStatus===false">
+  Se Connecter
+</button>
+<button type="button" class="btn btn-danger" (click)="onSignOut()" *ngIf="authStatus===true">
+  Se deconnecter
+</button>
