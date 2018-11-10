@@ -3,6 +3,7 @@
                 'list-group-item-danger': appareilStatus==='éteint'}">
     <div *ngIf="getAppareilStatus()==='éteint'" style="width: 20px;height: 20px;background-color: red"></div>
     <h4 [ngStyle]="{color: getColor()}">AppareilName: {{appareilName}} -- appareilStatus: {{getAppareilStatus()}} </h4>
+    <a [routerLink]="[appareilId]">Details</a>
     <input type="text" class="form-control" [(ngModel)]="appareilName">
     <button type="button" class="btn btn-success" (click)="onAllumer()" [disabled]="getAppareilStatus()==='allumé'">
       Allumer
