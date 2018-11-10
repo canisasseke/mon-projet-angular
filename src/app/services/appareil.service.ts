@@ -38,6 +38,18 @@ private  appareils=[
     );
     return appareil;
   }
+  saveAppareil(name: string,status: string){
+  const  appareilObject = {
+      id: 0,
+      name: '',
+      status: ''
+    }
+    appareilObject.id = this.appareils[this.appareils.length - 1].id +1;
+    appareilObject.name = name;
+    appareilObject.status = status;
+    this.appareils.push(appareilObject);
+    this.emitAppareiSubject();
+  }
   switchOnAll() {
     for(let appareil of this.appareils){
       appareil.status = 'allumé'
